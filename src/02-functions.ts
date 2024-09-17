@@ -25,6 +25,14 @@ function findFriends(
   return result
 }
 
+function addInterest(f: Friend, interest: string) : string[]{
+  if(f.interests == undefined){
+    f.interests = []
+  } 
+  f.interests.push(interest)
+  return f.interests
+}
+
 // Find the colleague with the highest extension number.
 function highestExtension(cs: Colleague[]) {
   const result = cs.sort(
@@ -67,11 +75,13 @@ function sortColleagues(
 //console.log(findFriends(friends, (friend) => friend.name.startsWith('Pa')));
 //console.log(findFriends(friends, (friend) => friend.age < 35));
 
-console.log(sortColleagues(colleagues.current, (a, b) => (a.contact.extension - b.contact.extension),3));
-console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length),1));
-console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length))); // NEW
+//console.log(sortColleagues(colleagues.current, (a, b) => (a.contact.extension - b.contact.extension),3));
+//console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length),1));
+//console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length))); // NEW
 
 //console.log(older(friends[0]))
 //console.log(allOlder(friends))
 //console.log(highestExtension(colleagues.current))
 //console.log(colleagues.current.filter((c) => c.name === "Sheild O Connell"));
+
+console.log(addInterest(friends[0], 'Politics'))

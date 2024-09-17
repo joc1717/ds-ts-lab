@@ -5,6 +5,7 @@ const friend1: Friend = {
     phone: "087-12345",
     age: 25,
     dob: new Date("1998-11-20") ,
+    interests: ['Music', 'Sport'],
   };
   
   const friend2: Friend = {
