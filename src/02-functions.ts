@@ -29,6 +29,7 @@ function addInterest(f: Friend, interest: string) : string[]{
   if(f.interests == undefined){
     f.interests = []
   } 
+  
   f.interests.push(interest)
   return f.interests
 }
