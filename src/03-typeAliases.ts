@@ -102,4 +102,4 @@ function getBuddyListFriends(list: BuddyList): Friend[] {
     }, []);
 }
 
-console.log(getBuddyListFriends(myBandBuddies))
+console.log(getBuddyListFriends(myFootballBuddies))
